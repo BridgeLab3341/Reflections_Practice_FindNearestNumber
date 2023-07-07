@@ -8,7 +8,7 @@ namespace Reflections_Practice_FindNearestNumber
 {
     public class NearestNumber
     {
-        public static void FindNearestNumber(int n)
+        public static int FindNearestNumber(int n)
         {
             int absnumber=Math.Abs(n);
             int closestNumber = Int32.MaxValue;
@@ -29,7 +29,7 @@ namespace Reflections_Practice_FindNearestNumber
                     }
                 }
            }
-            Console.WriteLine(Math.Sign(n)* closestNumber);
+            return(Math.Sign(n)* closestNumber);
         }
         public static bool IsEvenNumber(int number)
         {
