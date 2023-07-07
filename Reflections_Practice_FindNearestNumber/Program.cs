@@ -40,6 +40,11 @@ namespace Reflections_Practice_FindNearestNumber
             object[] constructorArgs = { parameterValue };
             NearestNumber parameterizedObject = (NearestNumber)Activator.CreateInstance(type, constructorArgs);
             Console.WriteLine($"Parameterized object created using reflection: {parameterizedObject}");
+            // 5) Invoke method using reflection
+            int number = 23;
+            MethodInfo method1 = type.GetMethod("NearestNumber");
+            var result = (int)method1.Invoke(null, new object[] { number });
+            Console.WriteLine($"Method invocation using reflection: {result}");
         }
     }
 }
