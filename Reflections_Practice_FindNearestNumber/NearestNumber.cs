@@ -8,6 +8,10 @@ namespace Reflections_Practice_FindNearestNumber
 {
     public class NearestNumber
     {
+        public NearestNumber()
+        {
+
+        }
         public static int FindNearestNumber(int n)
         {
             int absnumber=Math.Abs(n);
