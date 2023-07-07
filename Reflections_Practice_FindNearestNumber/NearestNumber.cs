@@ -8,10 +8,6 @@ namespace Reflections_Practice_FindNearestNumber
 {
     public class NearestNumber
     {
-        public NearestNumber()
-        {
-
-        }
         public static int FindNearestNumber(int n)
         {
             int absnumber=Math.Abs(n);
@@ -47,6 +43,13 @@ namespace Reflections_Practice_FindNearestNumber
                 number/=10;
             }
             return true;
+        }
+    }
+    public class NearestEvenNumberFinder
+    {
+        public static int FindNearestEvenNumber(int number)
+        {
+            return 0;
         }
     }
 }
