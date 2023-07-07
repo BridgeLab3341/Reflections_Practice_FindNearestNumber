@@ -31,8 +31,15 @@ namespace Reflections_Practice_FindNearestNumber
             {
                 Console.WriteLine(property.Name);
             }
-            //Default Constructor Object
+            //3)Default Constructor Object
             NearestNumber.FindNearestNumber(0);
+            //NearestNumber emptyObject = (NearestNumber)Activator.CreateInstance(type);
+            //Console.WriteLine($"\nEmpty object created using reflection: {emptyObject}");
+            // 4) Create parameterized object using reflection
+            int parameterValue = 42;
+            object[] constructorArgs = { parameterValue };
+            NearestNumber parameterizedObject = (NearestNumber)Activator.CreateInstance(type, constructorArgs);
+            Console.WriteLine($"Parameterized object created using reflection: {parameterizedObject}");
         }
     }
 }
