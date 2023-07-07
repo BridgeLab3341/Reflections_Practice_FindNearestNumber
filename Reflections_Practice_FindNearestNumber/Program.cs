@@ -31,14 +31,8 @@ namespace Reflections_Practice_FindNearestNumber
             {
                 Console.WriteLine(property.Name);
             }
-            //Default Constructor
-            NearestEvenNumberFinder.FindNearestEvenNumber(17);
-            Type type1 = typeof(NearestEvenNumberFinder);
-            ConstructorInfo[] constructorInfos=type.GetConstructors(BindingFlags.Public| BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance);
-            foreach(ConstructorInfo constructor in constructorInfos)
-            {
-                Console.WriteLine(constructor);
-            }
+            //Default Constructor Object
+            NearestNumber.FindNearestNumber(0);
         }
     }
 }
